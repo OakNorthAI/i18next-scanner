@@ -1,30 +1,15 @@
 {
   "name": "i18next-scanner",
-  "version": "2.10.3",
+  "version": "2.10.4",
   "description": "Scan your code, extract translation keys/values, and merge them into i18n resource files.",
-  "homepage": "https://github.com/i18next/i18next-scanner",
-  "author": "Cheton Wu <cheton@gmail.com>",
-  "contributors": [
-    {
-      "name": "Cheton Wu",
-      "email": "cheton@gmail.com",
-      "url": "https://github.com/cheton"
-    }
-  ],
   "bin": {
     "i18next-scanner": "./bin/cli.js"
   },
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "npm run eslint && npm run build && npm test",
+    "prepublish": "npm run eslint && npm run build",
     "build": "babel ./src --out-dir ./lib",
-    "eslint": "eslint ./src",
-    "coveralls": "tap test/*.js --coverage --coverage-report=text-lcov --nyc-arg=--require --nyc-arg=babel-register | coveralls",
-    "test": "tap test/*.js --no-esm --no-timeout --node-arg=--require --node-arg=@babel/register"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:i18next/i18next-scanner.git"
+    "eslint": "eslint ./src"
   },
   "license": "MIT",
   "engines": {
